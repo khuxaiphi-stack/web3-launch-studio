@@ -1,9 +1,127 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>$GTA — Ad-Free Whale Bot Preview</title>
-<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;background:#070b14;color:#f8fafc;padding:1.5rem 1rem 3rem;margin:0}.wrap{max-width:760px;margin:0 auto}.nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.7rem;background:#111927;border:1px solid #24344d;border-radius:13px;padding:.85rem 1.1rem;margin-bottom:1.4rem}
-.btn{text-decoration:none;padding:.52rem .95rem;border-radius:9px;font-weight:800;font-size:.84rem}.b-main{background:#10b981;color:#04130d}.b-alt{background:#0d1422;color:#f8fafc;border:1px solid #24344d}.win{background:#0e1621;border:1px solid #24344d;border-radius:16px;padding:1.15rem}.msg{background:#182533;border:1px solid rgba(56,189,248,.2);border-radius:13px;padding:1rem;margin-bottom:.9rem}.msg:last-child{margin-bottom:0}.tbtn{text-align:center;background:#243447;color:#fff;text-decoration:none;padding:.5rem;border-radius:8px;font-size:.83rem;font-weight:700}</style></head><body>
-<div class="wrap"><div class="nav"><a class="btn b-alt" href="./solana-gta-pump.html">← Back to $GTA Site Demo</a><a class="btn b-main" href="./solana-gta-pump.html#unlock">Claim Bot ($99) or Bundle ($199)</a></div>
-<h1 style="font-size:1.6rem;margin:0 0 .4rem">$GTA Custom Ad-Free Telegram Whale Sentinel</h1><p style="color:#94a3b8;margin:0 0 1.25rem;line-height:1.5">Public buy-bots run paid competitor token ads inside your group. Own your dedicated $GTA Sentinel outright—zero monthly fees, zero competitor ads, 15-minute setup.</p>
-<div class="win"><div class="msg"><div style="display:flex;justify-content:space-between;margin-bottom:.5rem"><strong>🐋 $GTA Whale &amp; LP Sentinel <span style="color:#38bdf8;font-size:.72rem">[BOT • AD-FREE]</span></strong><span style="color:#94a3b8;font-size:.75rem">#1 Live Pool</span></div>
-<div style="margin-bottom:.55rem">🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢🟢</div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:.4rem;font-size:.88rem;margin-bottom:.7rem"><div>💵 Spent: <strong>$18,165</strong></div><div>🪙 Bought: <strong>10,691,361 $GTA</strong></div><div>👤 Maker: <a style="color:#38bdf8" href="https://solscan.io/account/7KBFymfGAe8MmKEuNersoM59TvpiHzZ76jP7rSLrpump" target="_blank">7KBFy...pump</a></div><div>📊 MCap/LP: <strong>$1.69M / $97.2K</strong></div></div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem"><a class="tbtn" href="https://jup.ag/swap/SOL-7KBFymfGAe8MmKEuNersoM59TvpiHzZ76jP7rSLrpump" target="_blank">⚡ Buy $GTA (Jupiter)</a><a class="tbtn" href="https://dexscreener.com/solana/gqhhvhakqmrmzm8bhk9kscfn93xa7cbmowh4dupzs2a" target="_blank">🔍 Verify TX</a></div></div></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$GTA — Telegram Buy Bot Preview</title>
+  <style>
+    :root { --bg:#060912; --surface:#0e1525; --msg:#162133; --border:rgba(148,163,184,0.15); --accent:#10b981; --blue:#38bdf8; --text:#f8fafc; --muted:#94a3b8; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif; background:radial-gradient(800px 380px at 50% -10%,#12203d 0%,var(--bg) 65%); color:var(--text); min-height:100vh; padding:1.5rem 1.15rem 3rem; -webkit-font-smoothing:antialiased; }
+    .wrap { max-width:720px; margin:0 auto; display:grid; gap:1.15rem; }
+    .top-bar { display:flex; justify-content:space-between; align-items:center; gap:0.75rem; flex-wrap:wrap; }
+    .btn { display:inline-flex; align-items:center; text-decoration:none; padding:0.48rem 0.9rem; border-radius:9px; font-weight:700; font-size:0.82rem; }
+    .btn-ghost { background:var(--surface); color:#e2e8f0; border:1px solid var(--border); }
+    .btn-solid { background:var(--accent); color:#03150e; }
+    .header-row { display:flex; align-items:center; gap:0.85rem; }
+    .avatar { width:48px; height:48px; border-radius:13px; object-fit:cover; border:1px solid rgba(56,189,248,0.3); background:var(--surface); }
+    h1 { font-size:1.45rem; font-weight:800; letter-spacing:-0.01em; }
+    .sub { color:var(--muted); font-size:0.88rem; margin-top:0.1rem; }
+    .tg-window { background:#0b111d; border:1px solid var(--border); border-radius:18px; padding:1.1rem; display:grid; gap:0.85rem; }
+    .tg-msg { background:var(--msg); border:1px solid rgba(56,189,248,0.14); border-radius:14px; padding:0.95rem 1.05rem; }
+    .tg-cmd { justify-self:end; background:#1c314a; color:#e2e8f0; padding:0.4rem 0.75rem; border-radius:12px 12px 2px 12px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:0.82rem; }
+    .tg-head { display:flex; align-items:center; gap:0.5rem; margin-bottom:0.45rem; flex-wrap:wrap; }
+    .bot-name { font-weight:700; font-size:0.88rem; color:var(--blue); }
+    .bot-badge { background:rgba(16,185,129,0.14); color:#6ee7b7; font-size:0.68rem; font-weight:700; padding:0.1rem 0.45rem; border-radius:999px; }
+    .msg-meta { margin-left:auto; font-size:0.72rem; color:var(--muted); }
+    .alert-line { font-weight:800; font-size:1rem; margin-bottom:0.4rem; }
+    .dot-bar { display:flex; gap:4px; flex-wrap:wrap; margin-bottom:0.65rem; }
+    .dot { width:10px; height:10px; border-radius:50%; background:var(--accent); box-shadow:0 0 6px rgba(16,185,129,0.45); display:inline-block; }
+    .kv-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.45rem 1rem; font-size:0.84rem; margin-bottom:0.75rem; }
+    @media (max-width:520px) { .kv-grid { grid-template-columns:1fr; } }
+    .kv-grid span { color:var(--muted); margin-right:0.3rem; }
+    .kv-grid a { color:var(--blue); text-decoration:none; font-family:ui-monospace,monospace; }
+    .tg-btns { display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; }
+    .tg-btns a { text-align:center; background:#223249; color:#f8fafc; text-decoration:none; padding:0.48rem; border-radius:8px; font-size:0.8rem; font-weight:600; }
+    .tg-btns a:hover { background:#2b3f5c; }
+    .footer-strip { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:0.95rem 1.15rem; display:flex; justify-content:space-between; align-items:center; gap:0.85rem; flex-wrap:wrap; font-size:0.84rem; color:#cbd5e1; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top-bar">
+      <a class="btn btn-ghost" href="./solana-gta-pump.html">← $GTA Site</a>
+      <a class="btn btn-solid" href="./solana-gta-pump.html#unlock">Get Bot ($99) / Bundle ($199)</a>
+    </div>
+    <div class="header-row">
+      <img class="avatar" src="https://cdn.dexscreener.com/cms/images/0r6LUbRgFPJzOmn8?width=800&amp;height=800&amp;quality=95&amp;format=auto" alt="$GTA" onerror="this.style.display='none'" />
+      <div>
+        <h1>$GTA Telegram Buy Bot</h1>
+        <p class="sub">Ad-free live Solana pool alerts · zero monthly fees</p>
+      </div>
+    </div>
+    <div class="tg-window" id="tg-feed">
+      <div id="live-buys-slot" style="display:grid;gap:0.85rem;"><div class="tg-msg" id="sample-buy-card"><div class="tg-head"><span class="bot-name">$GTA Buy Bot</span><span class="bot-badge">BOT · Zero Competitor Ads</span><span class="msg-meta">Alert Preview</span></div><div class="alert-line">New $GTA Buy</div><div class="dot-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><div class="kv-grid"><div><span>Spent</span> <strong>$850</strong></div><div><span>Received</span> <strong id="sample-tokens">829,268 $GTA</strong></div><div><span>Pool</span> <a href="https://dexscreener.com/solana/gqhhvhakqmrmzm8bhk9kscfn93xa7cbmowh4dupzs2a" target="_blank" rel="noopener noreferrer">GQHhv...Zs2a</a></div><div><span>MCap / LP</span> <strong class="js-mcap-lp">$1.02M / $75.1K</strong></div></div><div class="tg-btns"><a href="https://jup.ag/swap/SOL-7KBFymfGAe8MmKEuNersoM59TvpiHzZ76jP7rSLrpump" target="_blank" rel="noopener noreferrer">Buy on Jupiter</a><a href="https://dexscreener.com/solana/gqhhvhakqmrmzm8bhk9kscfn93xa7cbmowh4dupzs2a" target="_blank" rel="noopener noreferrer">Live Pool</a></div></div></div>
+      <div class="tg-cmd">/price</div>
+      <div class="tg-msg">
+        <div class="tg-head"><span class="bot-name">$GTA Buy Bot</span><span class="bot-badge">LIVE STATS</span></div>
+        <div class="kv-grid" style="margin-bottom:0;">
+          <div><span>Price</span> <strong id="cmd-price">$0.001025</strong> (<span id="cmd-chg">+2637.00%</span>)</div>
+          <div><span>24h Vol</span> <strong id="cmd-vol">$2.10M</strong></div>
+          <div><span>MCap</span> <strong id="cmd-fdv">$1.02M</strong></div>
+          <div><span>Liquidity</span> <strong id="cmd-liq">$75.1K</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-strip">
+      <span>Includes custom buy GIF, whale min-buy filter, /price &amp; /lp commands + source code.</span>
+      <a class="btn btn-solid" href="https://x.com/365Gsticks" target="_blank" rel="noopener noreferrer">DM @365Gsticks</a>
+    </div>
+  </div>
+  <script>
+    const TOKEN_ADDR = "7KBFymfGAe8MmKEuNersoM59TvpiHzZ76jP7rSLrpump";
+    const PAIR_ADDR = "GQHhvHAKQmRmZm8bHK9kscfn93Xa7CBMoWh4duPZs2a";
+    const SYMBOL = "GTA";
+    const GECKO_NET = "solana";
+    const SWAP_URL = "https://jup.ag/swap/SOL-7KBFymfGAe8MmKEuNersoM59TvpiHzZ76jP7rSLrpump";
+    const DEX_NAME = "Jupiter";
+    const EXPLORER_TX_PREFIX = "https://solscan.io/tx/__TX__";
+    const EXPLORER_ADDR_PREFIX = "https://solscan.io/account/__ADDR__";
+    function fmtCompact(val){const n=Number(val||0);if(!Number.isFinite(n)||n<=0)return '$0';if(n>=1e9)return '$'+(n/1e9).toFixed(2)+'B';if(n>=1e6)return '$'+(n/1e6).toFixed(2)+'M';if(n>=1e3)return '$'+(n/1e3).toFixed(1)+'K';return '$'+n.toFixed(0);}
+    function shortAddr(s){const str=String(s||'');return str.length<=12?str:str.slice(0,5)+'...'+str.slice(-4);}
+    function escHtml(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+    async function hydrateLiveBot(){
+      let mcapLpText='';
+      try{
+        const res=await fetch('https://api.dexscreener.com/latest/dex/tokens/'+encodeURIComponent(TOKEN_ADDR));
+        const data=await res.json();
+        const p=(data.pairs||[]).find(x=>x.pairAddress===PAIR_ADDR)||(data.pairs||[])[0];
+        if(p){
+          const price=Number(p.priceUsd||0);
+          if(price>0){
+            document.getElementById('cmd-price').innerText=price<0.01?'$'+price.toPrecision(4):'$'+price.toLocaleString('en-US',{maximumFractionDigits:6});
+            const st=document.getElementById('sample-tokens');
+            if(st)st.innerText=Math.round(850/price).toLocaleString('en-US')+' $'+SYMBOL;
+          }
+          const chg=Number(p.priceChange?.h24||0);
+          document.getElementById('cmd-chg').innerText=(chg>=0?'+':'')+chg.toFixed(2)+'%';
+          const fdv=fmtCompact(p.fdv||p.marketCap),liq=fmtCompact(p.liquidity?.usd);
+          mcapLpText=fdv+' / '+liq;
+          document.getElementById('cmd-fdv').innerText=fdv;
+          document.getElementById('cmd-liq').innerText=liq;
+          document.getElementById('cmd-vol').innerText=fmtCompact(p.volume?.h24);
+          document.querySelectorAll('.js-mcap-lp').forEach(el=>{el.innerText=mcapLpText;});
+        }
+      }catch{}
+      if(!document.getElementById('sample-buy-card'))return;
+      try{
+        let tr=await fetch('https://api.geckoterminal.com/api/v2/networks/'+encodeURIComponent(GECKO_NET)+'/pools/'+encodeURIComponent(PAIR_ADDR)+'/trades').then(r=>r.ok?r.json():null);
+        if(!tr?.data?.length){
+          const pr=await fetch('https://api.geckoterminal.com/api/v2/networks/'+encodeURIComponent(GECKO_NET)+'/tokens/'+encodeURIComponent(TOKEN_ADDR)+'/pools?page=1').then(r=>r.ok?r.json():null);
+          const alt=pr?.data?.[0]?.attributes?.address;
+          if(alt)tr=await fetch('https://api.geckoterminal.com/api/v2/networks/'+encodeURIComponent(GECKO_NET)+'/pools/'+encodeURIComponent(alt)+'/trades').then(r=>r.ok?r.json():null);
+        }
+        const buys=(tr?.data||[]).filter(d=>d?.attributes?.kind==='buy'&&Number(d?.attributes?.volume_in_usd||0)>=10).slice(0,3);
+        if(buys.length>0){
+          document.getElementById('live-buys-slot').innerHTML=buys.map(d=>{
+            const usd=Number(d.attributes.volume_in_usd||0),amt=Number(d.attributes.to_token_amount||0),buyer=d.attributes.tx_from_address||'',tx=d.attributes.tx_hash||'';
+            const dots='<span class="dot"></span>'.repeat(Math.min(14,Math.max(3,Math.round(usd/120))));
+            return '<div class="tg-msg"><div class="tg-head"><span class="bot-name">$'+escHtml(SYMBOL)+' Buy Bot</span><span class="bot-badge">BOT · Zero Competitor Ads</span></div><div class="alert-line">New $'+escHtml(SYMBOL)+' Buy</div><div class="dot-bar">'+dots+'</div><div class="kv-grid"><div><span>Spent</span> <strong>$'+usd.toLocaleString('en-US',{maximumFractionDigits:2})+'</strong></div><div><span>Received</span> <strong>'+amt.toLocaleString('en-US',{maximumFractionDigits:0})+' $'+escHtml(SYMBOL)+'</strong></div><div><span>Buyer</span> <a href="'+escHtml(EXPLORER_ADDR_PREFIX.replace('__ADDR__',encodeURIComponent(buyer)))+'" target="_blank" rel="noopener noreferrer">'+escHtml(shortAddr(buyer))+'</a></div><div><span>MCap / LP</span> <strong class="js-mcap-lp">'+escHtml(mcapLpText||document.getElementById('cmd-fdv').innerText+' / '+document.getElementById('cmd-liq').innerText)+'</strong></div></div><div class="tg-btns"><a href="'+escHtml(SWAP_URL)+'" target="_blank" rel="noopener noreferrer">Buy on '+escHtml(DEX_NAME)+'</a><a href="'+escHtml(EXPLORER_TX_PREFIX.replace('__TX__',encodeURIComponent(tx)))+'" target="_blank" rel="noopener noreferrer">View TX</a></div></div>';
+          }).join('');
+        }
+      }catch{}
+    }
+    hydrateLiveBot();
+  </script>
+</body>
+</html>
